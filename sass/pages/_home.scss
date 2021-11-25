@@ -1,0 +1,24 @@
+.container {
+    display: grid;
+    // grid-template-rows:
+    //     [header-start] minmax(100vh, min-content)
+    //     [header-end product-start] min-content [product-end about-start] minmax(
+    //         100vh,
+    //         min-content
+    //     )
+    //     [about-end customer-start] min-content [customer-end contact-start] min-content [contact-end footer-start] min-content [footer-end];
+
+    grid-template-rows:
+        [header-start] minmax(100vh, min-content)
+        [header-end product-start] min-content [product-end about-start]
+        min-content
+        [about-end customer-start] minmax(100vh, min-content)
+        [customer-end contact-start] min-content [contact-end footer-start] min-content [footer-end];
+
+    grid-template-columns:
+        [full-start] minmax(1.5rem, 1fr) [center-start] repeat(
+            8,
+            [col-start] minmax(min-content, 14.6rem) [col-end]
+        )
+        [center-end] minmax(1.5rem, 1fr) [full-end];
+}

@@ -1,0 +1,22 @@
+.btn {
+    // &:link,
+    // &:visited {
+
+    // }
+
+    font-family: inherit;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 100px;
+    text-decoration: none;
+    background-color: #bb3d1c;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    background-color: #d1441f;
+}

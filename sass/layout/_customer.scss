@@ -1,0 +1,58 @@
+.customer {
+    grid-row: customer-start / customer-end;
+    grid-column: full-start / full-end;
+
+    background-color: $color-main;
+    padding: 90px 0;
+
+    display: grid;
+    grid-template-columns: 1fr [customer-center-start] repeat(8, 2fr) [customer-center-end] 1fr;
+
+    &__heading {
+        grid-column: customer-center-start / customer-center-end;
+        text-align: center;
+
+        h2 {
+            color: white;
+        }
+    }
+
+    &__client {
+        display: flex;
+
+        @media only screen and (max-width: $bp-largest) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.client__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 3.5rem 2.5rem 4.5rem 4.5rem;
+    margin: 0 1.5rem;
+
+    &-img {
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid #bb3d1c;
+        width: 145px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+        & {
+            margin: 0 0 1.5rem 0;
+        }
+    }
+}
